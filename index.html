@@ -431,6 +431,11 @@
       <div class="nav-label">Penalties &amp; Scenarios</div>
       <div class="nav-tag">M6</div>
     </div>
+    <div class="nav-item" onclick="showSection('apollo')" id="nav-apollo">
+      <div class="nav-icon">🔵</div>
+      <div class="nav-label">Apollo.io: DNC Actions</div>
+      <div class="nav-tag">M7</div>
+    </div>
     <div class="nav-item" onclick="showSection('quickref')" id="nav-quickref">
       <div class="nav-icon">📌</div>
       <div class="nav-label">Quick Reference</div>
@@ -498,6 +503,12 @@
             <h4>Penalties &amp; Scenarios</h4>
             <p>Real consequences and how to handle common situations</p>
             <div class="mod-tag">Module 6</div>
+          </div>
+          <div class="module-card" onclick="showSection('apollo')">
+            <div class="mod-icon">🔵</div>
+            <h4>Apollo.io: DNC Actions</h4>
+            <p>Exactly how to flag a contact DNC in Apollo and what to do when you see the warning</p>
+            <div class="mod-tag">Module 7</div>
           </div>
         </div>
       </div>
@@ -690,7 +701,7 @@
           <div class="step-list">
             <div class="step-item">
               <div class="step-num">1</div>
-              <div class="step-body"><h4>Check CRM for DNC flag</h4><p>Verify the contact does not have a DNC flag in Salesforce/HubSpot before dialing.</p></div>
+              <div class="step-body"><h4>Check Apollo for an opted-out flag</h4><p>Open the contact's profile in Apollo and confirm they do not have an "Opted out" badge on their phone number before dialing.</p></div>
             </div>
             <div class="step-item">
               <div class="step-num">2</div>
@@ -734,7 +745,7 @@
             </div>
             <div class="step-item">
               <div class="step-num">2</div>
-              <div class="step-body"><h4>Log in CRM within 24 hours</h4><p>Mark the contact as DNC in the CRM as soon as possible after the call — do not wait until end of day or week.</p></div>
+              <div class="step-body"><h4>Opt them out in Apollo within 24 hours</h4><p>Use the "···" menu on their Apollo profile to select "Opt out of calls" — do not wait until end of day or week.</p></div>
             </div>
             <div class="step-item">
               <div class="step-num">3</div>
@@ -787,7 +798,7 @@
         <div class="scenario-card">
           <div class="scenario-label">Scenario 1</div>
           <p class="scenario-q">A prospect says during your call: <em>"Please don't call me anymore — I'm not interested."</em> You think they might change their mind next quarter, so you don't add them to DNC right away.</p>
-          <div class="scenario-a">✅ <strong>Correct Action:</strong> Log them as DNC in the CRM immediately. You cannot defer. Any future call could result in a $1,500 TCPA violation — per call.</div>
+          <div class="scenario-a">✅ <strong>Correct Action:</strong> Opt them out in Apollo immediately using the "···" menu. You cannot defer. Any future call could result in a $1,500 TCPA violation — per call.</div>
         </div>
 
         <div class="scenario-card">
@@ -810,6 +821,144 @@
 
         <div style="margin-top:20px;">
           <button class="btn btn-secondary" onclick="showSection('optout')">← Back</button>
+          <button class="btn btn-primary" style="margin-left:10px" onclick="showSection('apollo')">Next: Apollo.io →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══ APOLLO DNC ═══ -->
+    <div class="section-page" id="sec-apollo">
+      <div class="card">
+        <h2>🔵 Apollo.io: Opt Out of Calls</h2>
+        <div class="subtitle">How to manually flag a contact as Do Not Call in Apollo, and what to do when you find one that's already been opted out.</div>
+
+        <div class="alert info">
+          <div class="ai">ℹ️</div>
+          <div><strong>Our approach at Alternative Payments</strong><p>We use Apollo's manual <strong>"Opt out of calls"</strong> feature. Any time a contact asks not to be called, you are required to flag them immediately using the steps below. This is your primary action — do not wait, do not delegate it.</p></div>
+        </div>
+
+        <!-- STEP BY STEP -->
+        <div class="info-block">
+          <h3>📋 Step-by-Step: How to Opt a Contact Out of Calls</h3>
+          <div class="step-list">
+            <div class="step-item">
+              <div class="step-num">1</div>
+              <div class="step-body"><h4>Open the contact's profile in Apollo</h4><p>Search by name in People, find them in a sequence task queue, or click directly from a call log.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">2</div>
+              <div class="step-body"><h4>Click the <strong>"···"</strong> button in the contact header</h4><p>Located top-right of the contact, next to "Add to list" and "Add to sequence." It opens a short dropdown menu.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">3</div>
+              <div class="step-body"><h4>Select <strong>"Opt out of calls"</strong></h4><p>Apollo immediately suppresses this contact from all call-based sequences and tasks. The action takes effect instantly — no confirmation screen.</p></div>
+            </div>
+            <div class="step-item">
+              <div class="step-num">4</div>
+              <div class="step-body"><h4>Notify your manager</h4><p>Let your team lead know so the opt-out can be flagged at the campaign and list level — ensuring no colleague accidentally calls the same contact.</p></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- MOCKUP: CONTACT HEADER + DROPDOWN -->
+        <div style="margin:4px 0 28px;">
+          <div style="font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--text-light);margin-bottom:12px;">📸 Where to find the "···" menu and the "Opt out of calls" option</div>
+          <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+
+            <!-- Step 1: contact header -->
+            <div style="flex:1;min-width:280px;">
+              <div style="font-size:.72rem;color:var(--text-light);margin-bottom:6px;font-weight:600;">① Contact header — click "···"</div>
+              <div style="background:#111827;border-radius:10px;padding:14px 16px;font-family:system-ui,sans-serif;">
+                <div style="display:flex;align-items:center;gap:10px;margin-bottom:12px;">
+                  <div style="width:38px;height:38px;border-radius:50%;background:#4f46e5;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.9rem;flex-shrink:0;">JG</div>
+                  <div>
+                    <div style="color:#f1f5f9;font-weight:700;font-size:.92rem;">John Giordano</div>
+                    <div style="color:#94a3b8;font-size:.75rem;">Managing Partner · Green Technology Services</div>
+                  </div>
+                </div>
+                <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;">
+                  <div style="background:#1e293b;color:#94a3b8;border-radius:6px;padding:5px 10px;font-size:.75rem;border:1px solid #334155;">📞 Call</div>
+                  <div style="background:#1e293b;color:#94a3b8;border-radius:6px;padding:5px 10px;font-size:.75rem;border:1px solid #334155;">✉️ Email</div>
+                  <div style="background:#1e293b;color:#94a3b8;border-radius:6px;padding:5px 10px;font-size:.75rem;border:1px solid #334155;">+ Add to list</div>
+                  <div style="background:#4f46e5;color:#fff;border-radius:6px;padding:5px 10px;font-size:.75rem;">▶ Add to sequence</div>
+                  <div style="background:#f59e0b;color:#000;border-radius:6px;padding:5px 10px;font-size:.82rem;font-weight:800;border:2px solid #fbbf24;">···</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: dropdown -->
+            <div style="flex:0 0 auto;">
+              <div style="font-size:.72rem;color:var(--text-light);margin-bottom:6px;font-weight:600;">② Select "Opt out of calls"</div>
+              <div style="background:#1e1e1e;border-radius:10px;overflow:hidden;border:1px solid #333;min-width:210px;box-shadow:0 8px 24px rgba(0,0,0,.5);">
+                <div style="padding:10px 16px;color:#cbd5e1;font-size:.85rem;border-bottom:1px solid #2d2d2d;">Edit contact info</div>
+                <div style="padding:10px 16px;color:#cbd5e1;font-size:.85rem;border-bottom:1px solid #2d2d2d;">Merge duplicate</div>
+                <div style="padding:10px 16px;color:#cbd5e1;font-size:.85rem;border-bottom:1px solid #2d2d2d;">Flag data as inaccurate</div>
+                <div style="padding:10px 16px;color:#cbd5e1;font-size:.85rem;border-bottom:1px solid #2d2d2d;">Push to Salesforce</div>
+                <div style="padding:10px 16px;color:#cbd5e1;font-size:.85rem;border-bottom:1px solid #333;">View CRM sync history</div>
+                <div style="padding:10px 16px;background:#292929;border-top:1px solid #444;border-bottom:1px solid #2d2d2d;display:flex;align-items:center;gap:8px;">
+                  <span style="color:#f59e0b;font-size:1rem;">⚠</span>
+                  <span style="color:#fff;font-weight:700;font-size:.88rem;">Opt out of calls</span>
+                  <span style="margin-left:auto;background:#f59e0b;color:#000;font-size:.63rem;font-weight:800;padding:2px 8px;border-radius:8px;white-space:nowrap;">← This one</span>
+                </div>
+                <div style="padding:10px 16px;color:#f87171;font-size:.85rem;">Delete contact</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- WHAT AN OPTED-OUT CONTACT LOOKS LIKE -->
+        <div class="info-block">
+          <h3>👁️ How to Recognise a Contact Already Opted Out</h3>
+          <p>If a contact has previously been opted out of calls (by you or a colleague), Apollo shows an <strong>"Opted out"</strong> indicator on their profile. Before dialling anyone, glance at their contact panel. If you see any of the following — do not call.</p>
+        </div>
+
+        <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px;">
+          <!-- Opted out contact info panel mockup -->
+          <div style="flex:1;min-width:260px;">
+            <div style="font-size:.72rem;color:var(--text-light);margin-bottom:8px;font-weight:600;">📸 Contact Information panel — after opt-out</div>
+            <div style="background:#fff;border:1px solid #e2e8f0;border-radius:10px;overflow:hidden;font-family:system-ui,sans-serif;max-width:340px;">
+              <div style="background:#f8fafc;padding:9px 14px;font-size:.7rem;font-weight:700;color:#64748b;text-transform:uppercase;letter-spacing:.6px;border-bottom:1px solid #e2e8f0;">Contact Information</div>
+              <div style="padding:12px 14px;border-bottom:1px solid #f1f5f9;">
+                <div style="font-size:.83rem;color:#1e293b;margin-bottom:3px;">📧 john@greentech-services.net</div>
+                <div style="font-size:.72rem;color:#94a3b8;">Business · Source: Apollo</div>
+              </div>
+              <div style="padding:12px 14px;border-bottom:1px solid #f1f5f9;">
+                <div style="display:flex;align-items:center;gap:8px;font-size:.83rem;color:#64748b;">
+                  <span>📞</span>
+                  <span style="text-decoration:line-through;color:#94a3b8;">(555) 012-3456</span>
+                  <span style="background:#fee2e2;color:#991b1b;font-size:.65rem;font-weight:700;padding:2px 8px;border-radius:10px;">Opted out</span>
+                </div>
+              </div>
+              <div style="padding:12px 14px;background:#fff7ed;border-top:1px solid #fed7aa;display:flex;align-items:center;gap:8px;">
+                <span style="font-size:.9rem;">🔇</span>
+                <span style="font-size:.78rem;color:#92400e;font-weight:600;">This contact has opted out of calls</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- What to do -->
+          <div style="flex:1;min-width:240px;">
+            <div style="font-size:.72rem;color:var(--text-light);margin-bottom:8px;font-weight:600;">🛑 What to do when you see this</div>
+            <div style="background:#fff1f2;border:1px solid #fecdd3;border-radius:10px;padding:16px;font-size:.88rem;">
+              <ul style="padding-left:0;list-style:none;">
+                <li style="padding:6px 0 6px 20px;position:relative;border-bottom:1px solid #fecdd3;color:#1e293b;"><span style="position:absolute;left:0;color:#e02424;">✗</span> Do <strong>not</strong> dial — close the task immediately</li>
+                <li style="padding:6px 0 6px 20px;position:relative;border-bottom:1px solid #fecdd3;color:#1e293b;"><span style="position:absolute;left:0;color:#e02424;">✗</span> Do <strong>not</strong> reassign to a colleague to call instead</li>
+                <li style="padding:6px 0 6px 20px;position:relative;border-bottom:1px solid #fecdd3;color:#1e293b;"><span style="position:absolute;left:0;color:#e02424;">✗</span> Do <strong>not</strong> reach out via a personal device</li>
+                <li style="padding:6px 0 6px 20px;position:relative;border-bottom:1px solid #fecdd3;color:#1e293b;"><span style="position:absolute;left:0;color:#e02424;">✗</span> Do <strong>not</strong> remove the Sequences tab on their profile</li>
+                <li style="padding:6px 0 6px 20px;position:relative;color:#166534;"><span style="position:absolute;left:0;color:#16a34a;">✓</span> Notify your manager so the contact is flagged at the list/campaign level</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="alert warn">
+          <div class="ai">⚠️</div>
+          <div><strong>Apollo opt-out covers Apollo only</strong><p>If a contact is ever reached outside of Apollo — via a personal cell, a desk phone, or any other tool — the opted-out status in Apollo will not be visible there. When in doubt, always check Apollo first, and notify your manager so the flag is documented at the team level.</p></div>
+        </div>
+
+        <div style="margin-top:20px;">
+          <button class="btn btn-secondary" onclick="showSection('penalties')">← Back</button>
           <button class="btn btn-primary" style="margin-left:10px" onclick="showSection('quickref')">Quick Reference →</button>
         </div>
       </div>
@@ -835,7 +984,7 @@
           <div class="ref-card red">
             <div class="ri">⏱</div>
             <h4>24 Hours</h4>
-            <p>Our internal deadline to log an opt-out request in the CRM (law allows 30 days)</p>
+            <p>Our internal deadline to opt a contact out in Apollo after a request (law allows 30 days)</p>
           </div>
           <div class="ref-card green">
             <div class="ri">📁</div>
@@ -887,7 +1036,7 @@
     <div class="section-page" id="sec-quiz">
       <div class="card">
         <h2>🧠 Knowledge Check</h2>
-        <div class="subtitle" id="quizSubtitle">10 questions — score 80% or higher to receive your certificate.</div>
+        <div class="subtitle" id="quizSubtitle">9 questions — score 80% or higher to receive your certificate.</div>
 
         <div class="quiz-wrap" id="quizWrap">
           <div class="q-counter" id="qCounter">Question 1 of 10</div>
@@ -915,7 +1064,7 @@
 // ── Section Navigation ──
 var visitedSections = new Set(['home']);
 var totalSections = 7; // laws, registry, consent, internal, optout, penalties, quickref
-var sections = ['home','laws','registry','consent','internal','optout','penalties','quickref','quiz'];
+var sections = ['home','laws','registry','consent','internal','optout','penalties','apollo','quickref','quiz'];
 
 function showSection(id) {
   sections.forEach(function(s) {
@@ -935,7 +1084,7 @@ function showSection(id) {
 }
 
 function updateProgress() {
-  var content = ['laws','registry','consent','internal','optout','penalties','quickref'];
+  var content = ['laws','registry','consent','internal','optout','penalties','apollo','quickref'];
   var visited = content.filter(function(s) { return visitedSections.has(s); }).length;
   var pct = Math.round((visited / content.length) * 100);
   document.getElementById('topProgress').textContent = pct + '%';
@@ -950,7 +1099,6 @@ var wQuestions = [
   { q: "Which is TRUE about the Established Business Relationship (EBR) exemption?", opts: ["It allows calling any customer regardless of consent for cell phones","It applies under TSR but does NOT protect you from TCPA liability for cell phones","It exempts you from all DNC requirements for 5 years","It only applies to landlines and requires written documentation"], correct: 1, exp: "EBR applies under TSR for landlines but does NOT satisfy TCPA requirements for auto-dialed calls to cell phones." },
   { q: "You want to send a marketing text to a prospect's cell phone using an auto-dialer. What do you need?", opts: ["A signed contract","Prior express written consent for marketing texts","Just their phone number from a list","An Established Business Relationship"], correct: 1, exp: "TCPA requires prior express written consent before auto-dialed marketing texts to cell phones." },
   { q: "What time window are outbound sales calls restricted to (called party's local time)?", opts: ["7 AM – 8 PM","8 AM – 9 PM","9 AM – 8 PM","8 AM – 8 PM"], correct: 1, exp: "TSR restricts calls to 8:00 AM–9:00 PM in the called party's local time zone." },
-  { q: "A third-party vendor provides 1,000 leads. What is the correct first step?", opts: ["Start dialing immediately","Scrub against National DNC Registry and internal DNC list first","Email to manager then start dialing","Only call leads with business emails"], correct: 1, exp: "All purchased lists must be scrubbed against both the National DNC Registry and the internal DNC list before any calls." },
   { q: "How long must DNC records and consent documentation be retained?", opts: ["1 year","2 years","3 years","5 years"], correct: 3, exp: "Both TCPA and our internal policy require retention for a minimum of 5 years." },
   { q: "Which constitutes valid TCPA express written consent for marketing calls to a cell phone?", opts: ["Prospect gave you their business card at a trade show","Prospect filled out a whitepaper download form (no consent language)","Prospect checked a box agreeing to receive marketing calls from Alternative Payments","Prospect replied to a cold email saying they're interested"], correct: 2, exp: "Valid consent requires an affirmative action with explicit language authorizing your specific company to call for marketing purposes." },
   { q: "A prospect was a customer 2 years ago and is on the National DNC Registry. You have an EBR. Can you auto-dial their cell phone for marketing?", opts: ["Yes — the EBR exemption applies","Yes — less than 5 years","No — EBR does not override TCPA cell phone requirements; express written consent is required","Only with manager approval"], correct: 2, exp: "EBR does not satisfy TCPA requirements for auto-dialed marketing calls to cell phones. You need separate express written consent." }
